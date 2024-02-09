@@ -26,6 +26,7 @@ public class MaintenanceDTO {
     private Double mileageAtMaintenance;
     private MaintenanceStatusEnum maintenanceStatus;
     private String comments;
+    private Car car;
 
 
     public static MaintenanceDTO of(Maintenance entity){

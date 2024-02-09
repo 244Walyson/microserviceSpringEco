@@ -36,7 +36,7 @@ public class CarService {
     private ModelMapper modelMapper = new ModelMapper();
 
     @Transactional(readOnly = true)
-    public CarDTO findById(Long id) {
+    public CarDTO findById(Long id) throws JsonProcessingException {
         Car car = repository.findById(id).orElseThrow(() -> {
             throw new RuntimeException("car not found");
         });

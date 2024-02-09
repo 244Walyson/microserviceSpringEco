@@ -55,6 +55,5 @@ INSERT INTO tb_car_image (car_id, img_url) VALUES (1, 'https://exemplo.com/image
 INSERT INTO tb_car_image (car_id, img_url) VALUES (2, 'https://exemplo.com/imagem3.jpg');
 
 INSERT INTO tb_maintenance (description, started_at, service_provider, cost, mileage_at_maintenance, maintenance_status, comments, car_id) VALUES ('Oil Change', TIMESTAMP '2024-01-01 10:00:00', 'Auto Service Center', 100.0, 30000.0, 1, 'Routine oil change.', 1);
-INSERT INTO tb_maintenance (description, started_at, service_provider, cost, mileage_at_maintenance, maintenance_status, comments, car_id) VALUES ('Brake Inspection', TIMESTAMP '2023-10-15 14:30:00', 'Brake Experts', 150.0, 25000.0, 2, 'Scheduled brake inspection.', 2);
-INSERT INTO tb_maintenance (description, started_at, service_provider, cost, mileage_at_maintenance, maintenance_status, comments, car_id) VALUES ('Tire Rotation', TIMESTAMP '2022-05-20 09:45:00', 'Tire Care Shop', 80.0, 28000.0, 2, 'Regular tire rotation.', 1);
-
+INSERT INTO tb_maintenance (description, started_at, service_provider, cost, mileage_at_maintenance, maintenance_status, comments, car_id) VALUES ('tire rotation', TIMESTAMP '2024-01-01 10:00:00', 'Auto Service Center', 100.0, 30000.0, 1, 'tire rotation at 500km', 1);
+INSERT INTO tb_maintenance (description, started_at, service_provider, cost, mileage_at_maintenance, maintenance_status, comments, car_id) VALUES ('Oil Change', TIMESTAMP '2024-01-01 10:00:00', 'Auto Service Center', 100.0, 30000.0, 1, 'Routine oil change.', 1);

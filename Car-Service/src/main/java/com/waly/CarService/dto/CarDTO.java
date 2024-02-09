@@ -42,17 +42,15 @@ public class CarDTO {
     private FuelTypeEnum fuelType;
     private CarStatusEnum carStatus;
     private Set<AccessoryDTO> accessories = new HashSet<>();
-    private Set<MaintenanceDTO> maintenanceHistory = new HashSet<>();
+    private Set<MaintenanceDTO> maintenances = new HashSet<>();
 
     public CarDTO(Car entity){
         BeanUtils.copyProperties(entity, this);
         this.setEngine(new EngineDTO().of(entity.getEngine()));
         this.setModel(new ModelDTO().of(entity.getModel()));
         this.setLocation(new CarLocationDTO(entity.getLocation()));
-        if(!maintenanceHistory.isEmpty()){
-            for (Maintenance maintenance : entity.getMaintenanceHistory()){
-                maintenanceHistory.add(new MaintenanceDTO().of(maintenance));
-            }
+        for (Maintenance maintenance : entity.getMaintenanceHistory()){
+            maintenances.add(new MaintenanceDTO().of(maintenance));
         }
         for (Accessory acc : entity.getAccessories()){
             accessories.add(new AccessoryDTO().of(acc));

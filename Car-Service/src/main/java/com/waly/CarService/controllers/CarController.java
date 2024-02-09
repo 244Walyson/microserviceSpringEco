@@ -23,7 +23,7 @@ public class CarController {
     private CarService service;
 
     @GetMapping(value = "/{id}")
-    public ResponseEntity<CarDTO> findById(@PathVariable Long id) {
+    public ResponseEntity<CarDTO> findById(@PathVariable Long id) throws JsonProcessingException {
         return ResponseEntity.ok().body(service.findById(id));
     }
     @GetMapping
