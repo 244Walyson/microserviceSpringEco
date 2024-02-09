@@ -1,4 +1,4 @@
-package com.waly.AuthService;
+package com.waly.authservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
